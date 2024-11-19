@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jagmeet Workstation</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:beige;
+            color: #333;
+        }
+        h1, h2, h3 {
+            font-family: 'Helvetica Neue', sans-serif;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* Header */
+        header {
+            background-color: #1a1a1a;
+            color: rgb(78, 24, 139);
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+        nav {
+            margin-top: 10px;
+        }
+        nav a {
+            margin: 0 15px;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            height: 600px;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .hero h2 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .cta-btn {
+            background-color: #007BFF;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .cta-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: #222;
+        }
+        section p {
+            font-size: 1.1em;
+            margin-bottom: 40px;
+            color: #666;
+        }
+        .services, .portfolio, .testimonials {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .service-item, .portfolio-item, .testimonial-item {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 250px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .service-item:hover, .portfolio-item:hover, .testimonial-item:hover {
+            transform: translateY(-10px);
+        }
+        .service-item h3, .portfolio-item h3, .testimonial-item h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .portfolio-item img {
+            max-width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        /* Contact Form */
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .contact-form input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .contact-form input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Scroll to Top Button */
+        .scroll-to-top-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 18px;
+            display: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>Jagmeet Workstation</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#testimonials">Testimonials</a>
+    </nav>
+</header>
+
+<!-- Hero Section -->
+<div class="hero" id="home">
+    <h2>Professional Video Editing & Thumbnail Creation</h2>
+    <p>Elevate your content with expert editing and design by Jagmeet Singh.</p>
+    <a href="#contact" class="cta-btn">Get Started</a>
+</div>
+
+<!-- Services Section -->
+<section id="services">
+    <h2>Our Services</h2>
+    <p>Offering high-quality services to elevate your content.</p>
+    <div class="services">
+        <div class="service-item">
+            <h3>Video Editing</h3>
+            <p>Professional video editing for YouTube, Instagram, and more.</p>
+        </div>
+        <div class="service-item">
+            <h3>Thumbnail Design</h3>
+            <p>Attractive thumbnails designed to increase engagement.</p>
+        </div>
+        <div class="service-item">
+            <h3>Social Media Content</h3>
+            <p>Custom videos and graphics tailored for social media platforms.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Section -->
+<section id="portfolio">
+    <h2>Portfolio</h2>
+    <p>Here’s a collection of some of Jagmeet’s recent work.</p>
+    <div class="portfolio">
+        <div class="portfolio-item" onclick="openLightbox('portfolio1')">
+            <img src="portfolio1.jpg" alt="Portfolio 1">
+        </div>
+        <div class="portfolio-item" onclick="openLightbox('portfolio2')">
+            <img src="portfolio2.jpg" alt="Portfolio 2">
+        </div>
+        <div class="portfolio-item" onclick="openLightbox('portfolio3')">
+            <img src="portfolio3.jpg" alt="Portfolio 3">
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about">
+    <h2>About Jagmeet Singh</h2>
+    <p>Jagmeet is a professional video editor and designer with a passion for creating visually stunning content. With years of experience in the industry, he specializes in video editing, thumbnail creation, and social media content.</p>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials">
+    <h2>What Our Clients Say</h2>
+    <p>We pride ourselves on delivering high-quality work. Here’s what our clients have to say:</p>
+    <div class="testimonials">
+        <div class="testimonial-item">
+            <h3>John Doe</h3>
+            <p>"Jagmeet's work was phenomenal! He transformed my YouTube channel with his excellent video editing skills."</p>
+        </div>
+        <div class="testimonial-item">
+            <h3>Sarah Lee</h3>
+            <p>"Amazing thumbnails! They helped increase my click-through rate on videos. Highly recommend!"</p>
+        </div>
+        <div class="testimonial-item">
+            <h3>Michael S.</h3>
+            <p>"Jagmeet is super professional and delivers on time. Will definitely work with him again."</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Ready to start your project? Fill out the form below!</p>
+    <form class="contact-form" id="contactForm">
+        <input type="text" name="name" id="name" placeholder="Your Name" required><br><br>
+        <input type="email" name="email" id="email" placeholder="Your Email" required><br><br>
+        <textarea name="message" id="message" placeholder="Describe your project" required></textarea><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</section>
+
+<!-- Scroll to Top Button -->
+<button class="scroll-to-top-btn" id="scrollBtn" onclick="scrollToTop()">↑</button>
+
+<!-- Footer -->
+<footer>
+    <p>© 2024 Jagmeet Workstation | All Rights Reserved</p>
+</footer>
+
+<script>
+    // Scroll to Top Button
+    window.onscroll = function() {showScrollButton()};
+    function showScrollButton() {
+        const scrollBtn = document.getElementById("scrollBtn");
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            scrollBtn.style.display = "block";
+        } else {
+            scrollBtn.style.display = "none";
+        }
+    }
+    function scrollToTop() {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+
+    // Smooth Scroll for Navigation Links
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+    // Contact Form Validation
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+
+        if (!name || !email || !message) {
+            alert("Please fill out all fields.");
+            event.preventDefault();
+        }
+    });
+
+    // Lightbox for Portfolio
+    function openLightbox(imageId) {
+        // Code to open a lightbox view of the image goes here
+        alert('Lightbox for ' + imageId + ' opened.');
+    }
+</script>
+
+</body>
+</html>
